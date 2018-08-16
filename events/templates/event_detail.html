@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ block.super }} | {{ event.name }} {% endblock %}
+
+{% block content %}
+    <h1>{{ event.name }}</h1>
+{#    {% for team in event.teams %}#}
+{#        <p>{{ team }}</p>#}
+{#    {% endfor %}#}
+{#    <p>Meta: {{ event.meta }}</p>#}
+{% endblock %}

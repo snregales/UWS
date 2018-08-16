@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}{{ block.super }} | Choice{% endblock %}
+
+{% block content %}
+    <div class='text-center'>
+        <p class="lead">Go To</p>
+        <a class="btn btn-secondary" href={% url 'athletes:athlete detail' slug=user.slug %}>Athlete's</a>
+        <p class="lead">Or</p>
+        <a class="btn btn-secondary" href={% url 'referees:referee detail' slug=user.slug %}>Referee's</a>
+        <p class="lead">Page</p>
+    </div>
+{% endblock %}
+

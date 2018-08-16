@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }} | {{ user.referee.fullname }}{% endblock %}
+
+{% block content %} <h1>{{ user.referee.fullname }} Profile</h1> {% endblock %}
+
+{% block nav %}{{ block.super }}{% endblock %}

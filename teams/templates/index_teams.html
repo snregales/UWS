@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} | Teams{% endblock %}
+
+{% block content %}
+    <h1>Teams</h1>
+    <ul>
+        {% for club in team_list %}
+            <li>
+                {% if request.user.is_anonymous %}
+                    {% comment %}
+                        TODO: add Athletes to team and create a detail view,
+                        TODO: than link this to that detal view
+                    {% endcomment %}
+                    {{ club.name }}
+                {% elif request.user.is_authenticated and request.user.is_staff %}
+                    <a class="nav-link" href={% url 'teams:update' slug=club.slug %}>
+                        {{ club.name }}
+                    </a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No events yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} | Events{% endblock %}
+
+{% block content %}
+    <h1>Events</h1>
+    {% include 'snippets/search.html' %}
+    <ul class="float-md-right col-sm-12 col-md-8">
+        {% for event in event_list %}
+            <li>
+                {% if request.user.is_anonymous %}
+                    {{ event.date|date }} - {{ event.name }} - closed: {{ event.closed }}
+                {% elif request.user.is_authenticated and request.user.is_staff %}
+                    <a class="nav-link" href={% url 'events:add team to event' slug=event.slug %}>
+                        {{ event.date|date }} - {{ event.name }} - {{ event.grade }}
+                    </a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No events yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

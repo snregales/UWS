@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}{{ block.super }} | Choice{% endblock %}
+
+{% block content %}
+    <div class='text-center'>
+        <p class="lead">Sign Up as</p>
+        <a class="btn btn-secondary" href={% url 'athlete register' %}>Athlete</a>
+        <p class="lead">Or</p>
+        <a class="btn btn-secondary" href={% url 'referee register' %}>Referee</a>
+    </div>
+{% endblock %}

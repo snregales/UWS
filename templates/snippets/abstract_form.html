@@ -1,0 +1,11 @@
+{% load bootstrap4 %}
+
+<form method='POST' class="form-group"> {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    {% bootstrap_form_errors form type='non_fields' %}
+    {% bootstrap_form form %}
+    <br>
+    {% for name, button in buttons %}
+        {% bootstrap_button extra_classes="mb-2 mr-2" name=name value=button content=button button_type='submit' %}
+    {% endfor %}
+</form>

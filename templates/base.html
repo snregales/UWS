@@ -1,0 +1,51 @@
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <title>{% block title %}UWR{% endblock title %}</title>
+
+    {% block head %}
+        {% include 'snippets/global_css.html' %}
+    {% endblock head %}
+</head>
+
+<body>
+
+    <div class='container'>
+        {% if messages %}
+            <div class="alert alert-heading text-center">
+                {% for message in messages %}
+                    <b>{{ message }}</b><br/>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            {% block nav %}
+                {% include 'snippets/nav.html' %}
+            {% endblock %}
+        </nav>
+        <div class="jumbotron">
+            {% block jumbotron %}
+                {% include 'snippets/jumbotron.html' %}
+            {% endblock %}
+        </div>
+        <div class="row mt-sm-4 mt-md-0">
+            <div class="col-sm-12 col-md-4">
+                <h3 class="mb-4">Menu</h3>
+                {% block menu %}
+                    {% include 'snippets/menu.html' %}
+                {% endblock %}
+            </div>
+            <div class="col-sm-12 col-md-8">
+                {% block content %}
+                    {% include 'snippets/content.html' %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'snippets/global_js.html' %}
+</body>
+</html>

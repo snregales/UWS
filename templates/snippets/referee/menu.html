@@ -1,0 +1,11 @@
+<li class="nav-item">
+    <a class="nav-link" href={% url 'referees:referee logger' slug=user.slug %}>Logger</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href=#>Mark Availability</a>
+</li>
+{% if not user.referee.certified %}
+    <li class="nav-item">
+        <a class="nav-link" href={% url 'referees:referee exam' %}>Get Certified</a>
+    </li>
+{% endif %}

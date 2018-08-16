@@ -1,0 +1,101 @@
+[
+{
+  "model": "scheduler.foul",
+  "pk": "CH",
+  "fields": {
+    "name": "Chocking",
+    "description": "To strangle, impede, or obstruct  a player's ability to breath",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "EI",
+  "fields": {
+    "name": "Equipment Interference",
+    "description": "Includes interference with the mask, snorkel, fins, and swimsuit",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "FS",
+  "fields": {
+    "name": "Foul Start",
+    "description": "Continue to play, without first returning to the start position",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "GI",
+  "fields": {
+    "name": "Goal Interference",
+    "description": "To knock over, hold or shift the goal with hands or feet",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "GT",
+  "fields": {
+    "name": "Goal Tending",
+    "description": "Players, without the ball, pushing or pulling opponent from the goal",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "HL",
+  "fields": {
+    "name": "Holding",
+    "description": "To hold onto an opponent when he/she does not have the ball",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "IP",
+  "fields": {
+    "name": "Illegal Participation",
+    "description": "For either on of the teams in the game to have more than 6 players in the water's field of play at any one time",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "OP",
+  "fields": {
+    "name": "Out of Play",
+    "description": "When the ball breaks the field of play.\r\nThe ball is given to the opposition of the team that last contacted the ball",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "PD",
+  "fields": {
+    "name": "Push Down",
+    "description": "To Push or Pull an opponent in order to increase one speed",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "SB",
+  "fields": {
+    "name": "Surfaced Ball",
+    "description": "To break, lead or throw the ball above the water surface",
+    "image": ""
+  }
+},
+{
+  "model": "scheduler.foul",
+  "pk": "UV",
+  "fields": {
+    "name": "Unnecessary Violence",
+    "description": "To Kick or hit the opponent on purpose or with intent to injured",
+    "image": ""
+  }
+}
+]

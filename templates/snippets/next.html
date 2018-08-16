@@ -1,0 +1,7 @@
+{% if next and next != "/" %}
+    {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page.</p>
+    {% else %}
+        <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,100 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": "athlete.referee@example.com",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": false,
+      "referee": true,
+      "athlete": true,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "all_false@example.com",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": true,
+      "referee": true,
+      "athlete": true,
+      "admin": true}},
+  {
+    "model": "accounts.user",
+    "pk": "all_true@example.com",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": false,
+      "staff": false,
+      "referee": false,
+      "athlete": false,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "inactive@example.com",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": false,
+      "staff": true,
+      "referee": false,
+      "athlete": false,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "active.athlete@example.my",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": false,
+      "referee": false,
+      "athlete": true,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "active.referee@example.my",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": false,
+      "referee": true,
+      "athlete": false,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "active.uncertify.referee@example.com",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": false,
+      "referee": true,
+      "athlete": false,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "active.staff@example.my",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": true,
+      "referee": false,
+      "athlete": false,
+      "admin": false}},
+  {
+    "model": "accounts.user",
+    "pk": "active.admin@example.my",
+    "fields": {
+      "password": "pbkdf2_sha256$100000$aG02qcYHuqaR$t0zMoTxCNXHDsfa+a1bvyIkMLudPizpEUM4P/ccHLxg=",
+      "last_login": null,
+      "active": true,
+      "staff": false,
+      "referee": false,
+      "athlete": false,
+      "admin": true}}]

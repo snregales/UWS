@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ super }} | Referee Home {% endblock %}
+{% block content %}
+    <p>Referee Home</p>
+    <div class="align-right">
+        {% if  request.user.is_authenticated %}
+            <a href={% url 'logout' %}>Logout</a>
+            <p>This is referee home page only open to referees</p>
+            {% if not request.user.certified %}
+                <a href={% url 'referees:referee exam' %}>Register for exam</a>
+            {% endif %}
+        {% else %}
+            <a href={% url 'login' %}>Login as referee</a>
+        {% endif %}
+    </div>
+{% endblock %}

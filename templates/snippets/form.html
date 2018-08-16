@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} | {{ title }}{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css"/>
+{% endblock %}
+
+{% block content %}
+    <div class='col-sm-6 col-sm-offset-3 text-center'>
+        <h1>{{ heading }}</h1>
+        <hr/>
+        {% if login %}
+            {% include 'snippets/next.html' %}
+        {% endif %}
+        {% include 'snippets/abstract_form.html' with buttons=buttons %}
+        {% if login %}
+            {% include 'snippets/registration_prompt.html' %}
+        {% endif %}
+    </div>
+{% endblock %}

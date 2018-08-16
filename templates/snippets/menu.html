@@ -1,0 +1,22 @@
+<ul class="nav flex-column nav-pills">
+    {% if user.is_anonymous %}
+        {% include 'snippets/anonymous/menu.html' %}
+    {% else %}
+        {% comment %}
+        TODO: refactor Change Password Link to a configure page
+        {% endcomment %}
+        <li class="nav-item">
+            <a class="nav-link" href={% url 'change pass' slug=request.user.slug %}>Change Password</a>
+        </li>
+        {% if user.is_referee %}
+            {% include 'snippets/referee/menu.html' %}
+        {% elif user.is_athlete %}
+            {% include 'snippets/athlete/menu.html' %}
+        {% elif user.is_staff %}
+            {% if user.is_admin %}
+                {% include 'snippets/admin/menu.html' %}
+            {% endif %}
+            {% include 'snippets/staff/menu.html' %}
+        {% endif %}
+    {% endif %}
+</ul>
