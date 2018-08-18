@@ -194,5 +194,7 @@ venv.bak/
 pyvenv.cfg
 pip-selfcheck.json
 
+# Static Files
+static/*
 
 # End of https://www.gitignore.io/api/git,django,python,pycharm,virtualenv
